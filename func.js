@@ -56,63 +56,17 @@ function CardCode() {
         document.getElementById("card-code-no").innerHTML = Cardcode.value;
     }
 }
-    
-//  function feedback(){
-//     let InputValidation = document.getElementsByTagName("input");
-//     for( i = 0; i< InputValidation.length; i++ ){
-//         InputValidation[i].addEventListener("blur", function AlertMsg() {
-//             let MessageAlert = this.nextElementSibling;
-//             if(this.value == ""){
-//                 MessageAlert.innerHTML = "Can't be empty";
-//             }else{
-//                MessageAlert.innerHTML = "";
-//             }
-//         })
-//     }
-// }
-
-// function feedback2(){
-//     let CardNumber = document.getElementById("card-no");
-//     let Name = document.getElementById("name");
-//     let  Expmonth= document.getElementById("month");
-//     let Expyear = document.getElementById("year");
-//     let Cardcode = document.getElementById("card-code");
-//     let AllAlert = document.getElementsByTagName("small");
-//     let isFormEmpty = Name.value === "" && CardNumber.value === "" && Expmonth.value === "" && Expyear.value === "" && Cardcode.value === "";
-//     for (let j = 0; j < AllAlert.length; j++) {
-//       if (isFormEmpty) {
-//            AllAlert[j].innerHTML = "cant be empty";
-//            document.getElementById("form").style.display = "block";
-//             AllAlert[j].innerHTML = "";
-//             document.getElementById("feedback").style.display= "none";
-//         }else{
-//             document.getElementById("form").style.display = "none";
-//             AllAlert[j].innerHTML = "";
-//             document.getElementById("feedback").style.display= "block";
-//        }
-//     }
-  
-// }
-// function feedback2() {
-//     let cardNumber = document.getElementById("card-no");
-//     let name = document.getElementById("name");
-//     let expMonth = document.getElementById("month");
-//     let expYear = document.getElementById("year");
-//     let cardCode = document.getElementById("card-code");
-//     let allAlerts = document.getElementsByTagName("small");
-//     let isFormEmpty = name.value === "" && cardNumber.value === "" && expMonth.value === "" && expYear.value === "" && cardCode.value === "";
-//     for (let j = 0; j < allAlerts.length; j++) {
-//       if (isFormEmpty) {
-//         allAlerts[j].innerHTML = "Can't be empty";
-//         document.getElementById("form").style.display = "block";
-//         document.getElementById("feedback").style.display = "none";
-//       } else {
-//         allAlerts[j].innerHTML = "";
-//         document.getElementById("form").style.display = "none";
-//         document.getElementById("feedback").style.display = "block";
-//       }
-//     }
-//   }
+    let InputValidation = document.getElementsByTagName("input");
+    for( i = 0; i< InputValidation.length; i++ ){
+        InputValidation[i].addEventListener("blur", function AlertMsg() {
+            let MessageAlert = this.nextElementSibling;
+            if(this.value == ""){
+                MessageAlert.innerHTML = "Can't be empty";
+            }else{
+               MessageAlert.innerHTML = "";
+            }
+        })
+    }
 function feedback2() {
     let cardNumber = document.getElementById("card-no");
     let name = document.getElementById("name");
