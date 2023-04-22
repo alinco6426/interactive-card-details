@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon"> 
+  <link rel="stylesheet" href="style.css"> 
+  <title>Interactive card details form</title>
+</head>
+<body>
+  <div class="all-content">
+    <div class="show">
+      <div class="card-details">
+        <div class="card-front">
+          <img src="card-logo.svg" >
+           <h3 id="no-det">0000 0000 0000 0000</h3>
+           <span class="names">
+             <p id="username">Jane Appleseed</p>
+            <p>
+              <span id="exp-month">00 /</span>
+              <span id="exp-year">00</span>
+            </span>
+          </p>
+        </div>
+        <div class="card-back">
+         <p class="dot" id="card-code-no"> 000</p>
+        </div>
+       </div>
+    </div>
+  <div class="form">
+ <div id="form">
+  <label for="cardname">Cardholder Name</label>
+  <input oninput="UserName()" id="name" type="text" required id="cardname" placeholder="  e.g. Jane Appleseed " pattern="[Aa-Zz]">
+  <small></small>
+  <label for="card-numebr">Card Number</label>
+  <input oninput="card()" id="card-no" type="tel" required placeholder="  e.g. 1234 5678 9123 0000" pattern="[0-9]" size="16" maxlength="16">
+  <small></small>
+    <span class="cut">
+      <label for="exp-date">Exp. Date (MM/YY)</label>
+      <label for="cvc">CVC</label>
+    </span>
+    <div class="space">
+     <div>
+      <input oninput="Expmonth()" id="month" type="text" maxlength="2" required placeholder=" MM" pattern="[0-9]">
+      <small></small>
+     </div>
+      <div>
+        <input  oninput=" Expyear()" id="year" type="text" maxlength="2" required placeholder="YY" pattern="[0-9]">
+      <small></small>
+      </div>
+      <div>
+        <input oninput="CardCode()" id="card-code" type="text" maxlength="3" required placeholder="e.g. 123" pattern="[0-9]">
+        <small></small>
+      </div>
+    </div>
+  <button onclick="feedback2()">Confirm</button>
+ </div>
+  <div class="feedback" id="feedback">
+    <img src="icon-complete.svg" >
+    <h1> Thank you!</h1>
+    <p>We've added your card details</p>
+    <button> Continue</button>
+    </div>
+  </div>
+</div>
+<script src="func.js"></script>
+</body>
+</html>
